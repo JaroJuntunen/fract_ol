@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 12:22:17 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/01/10 16:57:54 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/26 20:43:56 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include "get_next_line.h"
 
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
@@ -94,4 +95,5 @@ int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_isthere(char *str, char c);
 int		ft_strmove(char **dst, char **src);
+double	values_abs(double n);
 #endif

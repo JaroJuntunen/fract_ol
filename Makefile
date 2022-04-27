@@ -6,7 +6,7 @@
 #    By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 15:35:30 by jjuntune          #+#    #+#              #
-#    Updated: 2022/04/19 15:29:02 by jjuntune         ###   ########.fr        #
+#    Updated: 2022/04/26 21:00:31 by jjuntune         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = fractol
 
 LIBRERY = libft/libft.a
 
-FILES = main.c keyhooks.c image_calculation.c
+FILES = main.c keyhooks.c julia_set.c mandelbrot_set.c burning_ship_set.c \
+		mouse_events.c
 
 OFILES = $(FILES:.c=.o)
 

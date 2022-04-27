@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 20:54:29 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/27 14:56:38 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/27 19:07:46 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	mouse_events(int button, int x, int y, t_mlx *mlx)
 		mlx->zoom -= 1;
 	if (button == 1)
 		mlx->lock *= -1;
-
 	calculate_image(mlx);
 	mlx_put_image_to_window(mlx->mlx, mlx->win, mlx->image, 0, 0);
 	return (0);

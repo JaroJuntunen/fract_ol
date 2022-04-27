@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:03:57 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/27 18:45:05 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/27 19:06:22 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,22 @@ static void	find_right_fractal(char *argument, t_mlx *mlx)
 {
 	if (ft_strcmp("Julia", argument) == 0
 		|| ft_strcmp("julia", argument) == 0)
-		{
-			mlx->fractal_type = 1;
-			mlx->iter = 300;
-		}
+	{
+		mlx->fractal_type = 1;
+		mlx->iter = 300;
+	}
 	else if (ft_strcmp("Mandelbrot", argument) == 0
 		|| ft_strcmp("mandelbrot", argument) == 0)
-		{
-			mlx->fractal_type = 2;
-			mlx->iter = 300;
-		}
+	{
+		mlx->fractal_type = 2;
+		mlx->iter = 300;
+	}
 	else if (ft_strcmp("Burningship", argument) == 0
 		|| ft_strcmp("burningship", argument) == 0)
-		{
-			mlx->fractal_type = 3;
-			mlx->iter = 100;
-		}
+	{
+		mlx->fractal_type = 3;
+		mlx->iter = 100;
+	}
 }
 
 static t_mlx	create_mlx_structure(char *argument)

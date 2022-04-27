@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 17:34:19 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/27 18:45:22 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/27 19:07:28 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	calculate_mandelbrot(t_mlx	*mlx)
 		while (x < mlx->win_w)
 		{
 			i = mandelbrot_iterator(f, mlx, x, y);
-			if ( i >= f.maxiterations)
+			if (i >= f.maxiterations)
 				f.color = 0x000000;
 			else
 				f.color = get_color(i);

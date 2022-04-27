@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 15:37:11 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/27 12:29:04 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:41:19 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct s_mlx
 	double	julia_cre;
 	double	julia_cim;
 	int		lock;
+	int		iter;
 }			t_mlx;
 
 typedef struct s_fractal

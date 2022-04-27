@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 17:34:19 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/26 21:29:02 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:45:22 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	calculate_mandelbrot(t_mlx	*mlx)
 	int			y;
 	int			i;
 
-	f.maxiterations = 300;
+	f.maxiterations = mlx->iter;
 	y = 0;
 	while (y < mlx->win_h)
 	{

@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 19:22:24 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/26 20:45:21 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:49:54 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	calculate_burning_ship(t_mlx	*mlx)
 	int			y;
 	int			x;
 
-	f.maxiterations = 100;
+	f.maxiterations = mlx->iter;
 	y = 0;
 	while (y < mlx->win_h)
 	{

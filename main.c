@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:03:57 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/27 14:52:18 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:45:05 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,26 @@ int	print_usage(void)
 	exit(0);
 }
 
-static int	find_right_fractal(char *argument)
+static void	find_right_fractal(char *argument, t_mlx *mlx)
 {
 	if (ft_strcmp("Julia", argument) == 0
 		|| ft_strcmp("julia", argument) == 0)
-		return (1);
+		{
+			mlx->fractal_type = 1;
+			mlx->iter = 300;
+		}
 	else if (ft_strcmp("Mandelbrot", argument) == 0
 		|| ft_strcmp("mandelbrot", argument) == 0)
-		return (2);
+		{
+			mlx->fractal_type = 2;
+			mlx->iter = 300;
+		}
 	else if (ft_strcmp("Burningship", argument) == 0
 		|| ft_strcmp("burningship", argument) == 0)
-		return (3);
-	return (0);
+		{
+			mlx->fractal_type = 3;
+			mlx->iter = 100;
+		}
 }
 
 static t_mlx	create_mlx_structure(char *argument)
@@ -64,7 +72,7 @@ static t_mlx	create_mlx_structure(char *argument)
 	mlx.image = mlx_new_image(mlx.mlx, mlx.win_w, mlx.win_h);
 	mlx.buffer = mlx_get_data_addr(mlx.image, &mlx.pixel_bits,
 			&mlx.line_bytes, &mlx.endian);
-	mlx.fractal_type = find_right_fractal(argument);
+	find_right_fractal(argument, &mlx);
 	mlx.zoom = 10;
 	mlx.movex = 0;
 	mlx.movey = 0;

@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 15:23:23 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/27 12:16:27 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:43:40 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	calculate_julia(t_mlx	*mlx)
 	int			y;
 	int			x;
 
-	f.maxiterations = 300;
+	f.maxiterations = mlx->iter;
 	f.cre = mlx->julia_cre;
 	f.cim = mlx->julia_cim;
 	y = 0;

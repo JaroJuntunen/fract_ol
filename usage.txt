@@ -1,0 +1,9 @@
+
+		How to use:
+		
+	./fractol [type of fractal]
+
+Type of fractal can be one of these:
+	--->Julia
+	--->Mandelbrot
+	--->(something else)

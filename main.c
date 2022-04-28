@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:03:57 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/27 19:06:22 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/28 14:24:20 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,16 @@ static void	find_right_fractal(char *argument, t_mlx *mlx)
 		mlx->fractal_type = 3;
 		mlx->iter = 100;
 	}
+	else
+		mlx->fractal_type = 0;
 }
 
 static t_mlx	create_mlx_structure(char *argument)
 {
 	t_mlx	mlx;
 
-	mlx.win_h = 500;
-	mlx.win_w = 750;
+	mlx.win_h = 360;
+	mlx.win_w = 500;
 	mlx.mlx = mlx_init();
 	mlx.win = mlx_new_window(mlx.mlx, mlx.win_w, mlx.win_h, "Fractol");
 	mlx.image = mlx_new_image(mlx.mlx, mlx.win_w, mlx.win_h);

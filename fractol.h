@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 15:37:11 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/27 18:41:19 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/04/28 14:38:57 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "libft/libft.h"
 # include <mlx.h>
-# include <math.h>
 # include <fcntl.h>
 
 typedef struct s_mlx

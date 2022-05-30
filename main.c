@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:03:57 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/28 14:24:20 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/05/17 16:29:38 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static t_mlx	create_mlx_structure(char *argument)
 {
 	t_mlx	mlx;
 
-	mlx.win_h = 360;
+	mlx.win_h = 500;
 	mlx.win_w = 500;
 	mlx.mlx = mlx_init();
 	mlx.win = mlx_new_window(mlx.mlx, mlx.win_w, mlx.win_h, "Fractol");
@@ -80,7 +80,7 @@ static t_mlx	create_mlx_structure(char *argument)
 	mlx.movey = 0;
 	mlx.julia_cre = -0.7;
 	mlx.julia_cim = 0.27015;
-	mlx.lock = -1;
+	mlx.lock = 1;
 	return (mlx);
 }
 
@@ -100,7 +100,7 @@ int	main(int argc, char **argv)
 {
 	t_mlx	mlx;
 
-	if (argc == 1)
+	if (argc == 1 || argc > 2)
 		if (print_usage() == -1)
 			return (1);
 	mlx = create_mlx_structure(argv[1]);

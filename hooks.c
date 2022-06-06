@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 16:10:14 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/04/28 14:44:24 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/06/06 20:03:54 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,13 @@ int	mouse_movement(int x, int y, t_mlx *mlx)
 {
 	if (mlx->lock == 1)
 	{
-		x = (x - mlx->win_w / 2);
-		y = (y - mlx->win_h / 2);
-		if (x < 0)
-			mlx->julia_cre -= 0.0001;
-		if (x >= 0)
-			mlx->julia_cre += 0.0001;
-		else if (y < 0)
-			mlx->julia_cim -= 0.0005;
-		else if (y >= 0)
-			mlx->julia_cim += 0.0005;
-		calculate_image(mlx);
-		mlx_put_image_to_window(mlx->mlx, mlx->win, mlx->image, 0, 0);
+		if (( y > 0 && y < mlx->win_h) && ( x > 0 && x < mlx->win_w))
+		{
+			mlx->julia_cre = ((((2.0 / (double)mlx->win_w)) * x) - 1);
+			mlx->julia_cim = ((((2.0 / (double)mlx->win_h)) * y) - 1);
+			calculate_image(mlx);
+			mlx_put_image_to_window(mlx->mlx, mlx->win, mlx->image, 0, 0);
+		}
 	}
 	return (0);
 }

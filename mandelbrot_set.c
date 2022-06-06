@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 17:34:19 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/05/17 16:31:24 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/06/06 20:06:22 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	get_color(int i)
 {
-	return ((255 * i) + 255 + (255 * i));
+	return ((255 * i) + 255 / i + (255 * i));
 }
 
 static int	mandelbrot_iterator(t_fractal f, t_mlx *mlx, int x, int y)

@@ -6,7 +6,7 @@
 /*   By: jjuntune <jjuntune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 15:23:23 by jjuntune          #+#    #+#             */
-/*   Updated: 2022/05/17 16:20:37 by jjuntune         ###   ########.fr       */
+/*   Updated: 2022/06/06 20:06:12 by jjuntune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	get_color(int i)
 {
-	return ((255 * i) + 255 + (255 * i));
+	return ((255 * i) + 255 / i + (255 * i));
 }
 
 static int	julia_iterator(t_fractal f, t_mlx *mlx, int x, int y)
